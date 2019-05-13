@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.haibin.calendarview.CalendarView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_backlog_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    app:calendar_padding="10dp"
+    app:calendar_height="32dp"
+    app:current_month_text_color="#000"
+    app:min_year="2004"
+    app:other_month_text_color="#A4A5A8"
+    app:scheme_text="假"
+    app:scheme_text_color="#000"
+    app:scheme_theme_color="#f50505"
+    app:selected_text_color="#fff"
+    app:selected_theme_color="#f50505"
+    app:week_background="#FFF"
+    app:week_text_color="#000"
+    app:week_text_size="12sp"
+    app:day_text_size="12sp"
+    app:current_day_text_color="#3F52E7"
+    app:max_select_range="-1"
+    app:min_select_range="2"
+    app:select_mode="range_mode"
+    app:month_view_show_mode="mode_fix"
+    app:month_view="com.example.administrator.callbacktest.view.CustomRangeMonthView"
+    app:week_view="com.example.administrator.callbacktest.view.CustomRangeWeekView"
+    android:visibility="visible">
+
+</com.haibin.calendarview.CalendarView>
+
+

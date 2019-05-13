@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="home_pager_text">#000000</color>
+    <color name="home_pager_text_checked">#217BF4</color>
+    <color name="front_page_line_color">#1F000000</color>
+</resources>

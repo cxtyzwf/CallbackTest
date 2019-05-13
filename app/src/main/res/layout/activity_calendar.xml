@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+        <View
+            android:id="@+id/fill_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#00000000"
+            android:visibility="gone"/>
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:background="#FFF"
+            android:layout_below="@+id/fill_status_bar">
+
+            <TextView
+                android:id="@+id/home_page_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="日程管理"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
+
+
+            <TextView
+                android:id="@+id/poa_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:text="单选"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
+            <!--android:switchPadding="5dp"-->
+            <!--android:thumb="@drawable/switch_custom_thumb_selector"-->
+            <!--android:track="@drawable/switch_custom_track_selector"-->
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F9FB"
+        android:orientation="vertical"
+        android:layout_below="@id/title"
+        app:default_status="shrink"
+        app:calendar_show_mode="both_month_week_view"
+        app:calendar_content_view_id="@+id/ll_message">
+
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F8F9FB">
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:text="今天"
+                android:textColor="@color/home_pager_text"
+                android:textSize="15sp"
+                android:paddingStart="19dp"
+                android:background="#E9EBFF"
+                android:gravity="center_vertical"
+                android:visibility="visible"
+                />
+        </LinearLayout>
+
+    </com.haibin.calendarview.CalendarLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh_layout"
+        android:layout_below="@id/calendarLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/if_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="没有任务，放松一下"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/if_none_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/if_none"
+                android:text="点击+按钮添加任务"
+                android:textSize="13sp"
+                android:textColor="#888"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"/>
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CallBackTest</string>
+    <string name="event_subscribe">跳转Activity准备接收一个事件的发布</string>
+    <string name="event_sticky_subscribe">跳转Activity准备接收一个粘性事件的发布</string>
+    <string name="imjage_request">使用Picasso异步加载图片</string>
+    <string name="intent_request">向服务器获取数据</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intent_recyclerview">recyclerview界面粘性头部</string>
+    <string name="viewPager_test">viewpager界面</string>
+    <string name="bgarefreshlayouttest">测试notification</string>
+    <string name="timechoose">时间选择器</string>
+</resources>

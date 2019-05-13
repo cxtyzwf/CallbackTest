@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ActivityE">
+
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarviewCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:calendar_padding="9.5dp"
+        app:current_month_text_color="#888888"
+        app:current_day_text_color="#fff"
+        app:other_month_text_color="#A4A5A8"
+        app:min_year="2004"
+        app:month_view_show_mode="mode_fix"
+        app:scheme_text="假"
+        app:scheme_text_color="#ffffff"
+        app:scheme_theme_color="#128c4b"
+        app:selected_text_color="#ffffff"
+        app:week_background="#fff"
+        app:year_view_day_text_color="#333333"
+        app:year_view_day_text_size="11sp"
+        app:day_text_size="12sp"
+        app:calendar_height="31.5dp"
+        app:year_view_month_text_color="#ffffff"
+
+        app:select_mode="single_mode"
+       app:month_view="com.example.administrator.callbacktest.Activity.ColorfulMonthView"
+        app:week_view="com.example.administrator.callbacktest.Activity.ColorfulMonthView"
+
+        >
+        <!--app:month_view_scrollable="false"-->
+
+    </com.haibin.calendarview.CalendarView>
+    <!--app:month_view="com.haibin.calendarviewproject.meizu.MeiZuMonthView"-->
+    <!--app:week_view="com.haibin.calendarviewproject.meizu.MeizuWeekView"-->
+</RelativeLayout>

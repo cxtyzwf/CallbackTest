@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/yuandian_checked" android:state_selected="true" />
+    <item android:drawable="@drawable/yuandian" />
+    <!--<item android:drawable="@mipmap/more" android:state_selected="true" />-->
+    <!--<item android:drawable="@mipmap/star" />-->
+
+</selector>
