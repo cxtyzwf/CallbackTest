@@ -1,7 +1,11 @@
 package com.example.administrator.callbacktest.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,15 +25,26 @@ public class ActivityB extends AppCompatActivity {
     @BindView(R.id.publish_sticky)
     Button publishSticky;
 
+
+    private float downX;
+    private View dv;
+    private int screenWidth, screenHeight;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b);
         ButterKnife.bind(this);
-        publish.setText("发布一个普通事件");
-        publishSticky.setText("发布一个粘性事件");
-    }
+        dv = getWindow().getDecorView();
+        // 获得手机屏幕的宽度和高度，单位像素
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        screenWidth = metrics.widthPixels;
+        screenHeight = metrics.heightPixels;
 
+
+    }
     @OnClick({R.id.publish, R.id.publish_sticky})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -43,4 +58,7 @@ public class ActivityB extends AppCompatActivity {
                 break;
         }
     }
+
 }
+
+

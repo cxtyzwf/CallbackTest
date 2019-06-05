@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.WordToWordActivity"></activity>
+        <activity android:name=".Activity.PanelActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".Activity.ActivityB2" />
+        <activity android:name=".Activity.WordToWordActivity" />
         <activity android:name=".Activity.CalendarActivity" />
         <activity android:name=".Activity.TestEditTextActivity" />
         <activity android:name=".Activity.ActivityA">

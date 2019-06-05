@@ -22,6 +22,7 @@ public class ActivityC extends AppCompatActivity {
 
     private TestStickyRecyclerViewAdapter adapter;
     private List<String> list;
+    private List<String> stickyList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,26 +32,26 @@ public class ActivityC extends AppCompatActivity {
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        list = getList(45);
+        list = getList(20);
         adapter = new TestStickyRecyclerViewAdapter(this);
         recyclerView.setAdapter(adapter);
+        adapter.setList(list);
+
         recyclerView.addItemDecoration(new StickyDecoration() {
             @Override
             public String getStickyHeaderName(int position) {
                 return list.get(position);
             }
         });
-        adapter.setList(list);
+
     }
     private List<String> getList(int size) {
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < 45; i++) {
-            if (i < size / 3) {
-                list.add("力量英雄");
-            } else if (i < size / 3 * 2) {
-                list.add("敏捷英雄");
+        for (int i = 0; i < 20; i++) {
+            if (i < size / 2) {
+                list.add("我的任务");
             } else {
-                list.add("智力英雄");
+                list.add("日程待办");
             }
         }
         return list;

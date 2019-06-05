@@ -48,6 +48,14 @@ public class CalendarView extends FrameLayout {
      */
     private MonthViewPager mMonthPager;
 
+    public WeekViewPager getmWeekPager() {
+        return mWeekPager;
+    }
+
+    public void setmWeekPager(WeekViewPager mWeekPager) {
+        this.mWeekPager = mWeekPager;
+    }
+
     /**
      * 日历周视图
      */
@@ -108,7 +116,7 @@ public class CalendarView extends FrameLayout {
 
         this.mWeekLine = findViewById(R.id.line);
         this.mWeekLine.setBackgroundColor(mDelegate.getWeekLineBackground());
-        FrameLayout.LayoutParams lineParams = (FrameLayout.LayoutParams) this.mWeekLine.getLayoutParams();
+        LayoutParams lineParams = (LayoutParams) this.mWeekLine.getLayoutParams();
         lineParams.setMargins(mDelegate.getWeekLineMargin(),
                 mDelegate.getWeekBarHeight(),
                 mDelegate.getWeekLineMargin(),
@@ -118,7 +126,7 @@ public class CalendarView extends FrameLayout {
         this.mMonthPager = (MonthViewPager) findViewById(R.id.vp_month);
         this.mMonthPager.mWeekPager = mWeekPager;
         this.mMonthPager.mWeekBar = mWeekBar;
-        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) this.mMonthPager.getLayoutParams();
+        LayoutParams params = (LayoutParams) this.mMonthPager.getLayoutParams();
         params.setMargins(0, mDelegate.getWeekBarHeight() + CalendarUtil.dipToPx(context, 1), 0, 0);
         mWeekPager.setLayoutParams(params);
 

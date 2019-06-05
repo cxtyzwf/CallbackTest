@@ -137,7 +137,7 @@ public final class WeekViewPager extends ViewPager {
     /**
      * 更新周视图布局
      */
-    void updateWeekViewClass() {
+     void updateWeekViewClass() {
         isUpdateWeekView = true;
         getAdapter().notifyDataSetChanged();
         isUpdateWeekView = false;

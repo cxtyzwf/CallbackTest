@@ -1,5 +1,6 @@
 package com.example.administrator.callbacktest.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -71,6 +72,8 @@ public class ActivityA extends AppCompatActivity {
     Button calendar;
     @BindView(R.id.word)
     Button word;
+    @BindView(R.id.panel)
+    Button panel;
 
     private String intentUrl = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538194830461&di=2fbe352a7527b4dd04c892d50371a72e&imgtype=0&src=http%3A%2F%2Fhimg2.huanqiu.com%2Fattachment2010%2F2015%2F1010%2F20151010093213972.jpg";
 
@@ -155,7 +158,7 @@ public class ActivityA extends AppCompatActivity {
 
 
     @OnClick({R.id.event, R.id.event_sticky, R.id.image_request, R.id.intent_request, R.id.intent_recyclerview, R.id.view_pager,
-            R.id.bga_refresh, R.id.time, R.id.citypicker, R.id.calendar,R.id.word})
+            R.id.bga_refresh, R.id.time, R.id.citypicker, R.id.calendar, R.id.word,R.id.panel})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.event:
@@ -210,8 +213,12 @@ public class ActivityA extends AppCompatActivity {
             case R.id.word:
 
                 break;
+            case R.id.panel:
+                startActivity(new Intent(this, PanelActivity.class));
+                break;
         }
     }
+
 
     @Override
     protected void onDestroy() {
@@ -219,6 +226,7 @@ public class ActivityA extends AppCompatActivity {
         EventBus.getDefault().removeAllStickyEvents();
         EventBus.getDefault().unregister(this);
     }
+
 
 
 }

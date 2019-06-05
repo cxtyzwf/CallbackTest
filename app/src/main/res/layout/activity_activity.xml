@@ -76,6 +76,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="语音识别"/>
+            <Button
+                android:id="@+id/panel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="底部弹出"/>
         </LinearLayout>
     </ScrollView>
     <TextView
